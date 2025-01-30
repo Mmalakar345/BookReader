@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Reading Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .reviews {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .review {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: calc(25% - 40px);
+        }
+        .review-buttons {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">BookReader</div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="more-books.html" class="nav-link">More Books</a>
+        </nav>
+        <div class="header-controls">
+            <div class="search-container">
+                <input type="text" id="searchBox" placeholder="Search books...">
+                <button type="button" id="searchBtn">Search</button>
+                <button type="button" id="cancelSearchBtn" class="cancel-btn hidden">✕</button>
+            </div>
+            <button id="themeToggle" class="theme-toggle">🌙 Dark Mode</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="book-container">
+            <div class="book-card" onclick="openBook('Bookes/TKMFullText.pdf')">
+                <img src="image/To Kill a Mockingbird.png" alt="To Kill a Mockingbird">
+                <h3>To Kill a Mockingbird</h3>
+                <p class="author">Harper Lee</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/book2.jpg" alt="1984">
+                <h3>1984</h3>
+                <p class="author">George Orwell</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/book3.jpg" alt="Pride and Prejudice">
+                <h3>Pride and Prejudice</h3>
+                <p class="author">Jane Austen</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/book4.jpg" alt="The Great Gatsby">
+                <h3>The Great Gatsby</h3>
+                <p class="author">F. Scott Fitzgerald</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/book5.jpg" alt="The Hobbit">
+                <h3>The Hobbit</h3>
+                <p class="author">J.R.R. Tolkien</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/book6.jpg" alt="The Catcher in the Rye">
+                <h3>The Catcher in the Rye</h3>
+                <p class="author">J.D. Salinger</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/book7.jpg" alt="Lord of the Flies">
+                <h3>Lord of the Flies</h3>
+                <p class="author">William Golding</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/book8.jpg" alt="The Alchemist">
+                <h3>The Alchemist</h3>
+                <p class="author">Paulo Coelho</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/book9.jpg" alt="Brave New World">
+                <h3>Brave New World</h3>
+                <p class="author">Aldous Huxley</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/book10.jpg" alt="The Little Prince">
+                <h3>The Little Prince</h3>
+                <p class="author">Antoine de Saint-Exupéry</p>
+            </div>
+        </div>
+
+        <div class="book-container">
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/book1.jpg" alt="To Kill a Mockingbird">
+                <h3>To Kill a Mockingbird</h3>
+                <p class="author">Harper Lee</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/book2.jpg" alt="1984">
+                <h3>1984</h3>
+                <p class="author">George Orwell</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/book3.jpg" alt="Pride and Prejudice">
+                <h3>Pride and Prejudice</h3>
+                <p class="author">Jane Austen</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/book4.jpg" alt="The Great Gatsby">
+                <h3>The Great Gatsby</h3>
+                <p class="author">F. Scott Fitzgerald</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/book5.jpg" alt="The Hobbit">
+                <h3>The Hobbit</h3>
+                <p class="author">J.R.R. Tolkien</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/book6.jpg" alt="The Catcher in the Rye">
+                <h3>The Catcher in the Rye</h3>
+                <p class="author">J.D. Salinger</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/book7.jpg" alt="Lord of the Flies">
+                <h3>Lord of the Flies</h3>
+                <p class="author">William Golding</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/book8.jpg" alt="The Alchemist">
+                <h3>The Alchemist</h3>
+                <p class="author">Paulo Coelho</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/book9.jpg" alt="Brave New World">
+                <h3>Brave New World</h3>
+                <p class="author">Aldous Huxley</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/book10.jpg" alt="The Little Prince">
+                <h3>The Little Prince</h3>
+                <p class="author">Antoine de Saint-Exupéry</p>
+            </div>
+        </div>
+
+        <section class="reviews">
+            <h2>Recent Reviews</h2>
+            <div class="review">
+                <p>This book was a fantastic read! Highly recommend it.</p>
+                <div class="review-buttons">
+                    <button class="like-button" onclick="updateCount('like', 0)">👍 Like (<span class="like-count">0</span>)</button>
+                    <button class="dislike-button" onclick="updateCount('dislike', 0)">👎 Dislike (<span class="dislike-count">0</span>)</button>
+                </div>
+            </div>
+            <div class="review">
+                <p>Not my cup of tea, but well-written.</p>
+                <div class="review-buttons">
+                    <button class="like-button" onclick="updateCount('like', 1)">👍 Like (<span class="like-count">0</span>)</button>
+                    <button class="dislike-button" onclick="updateCount('dislike', 1)">👎 Dislike (<span class="dislike-count">0</span>)</button>
+                </div>
+            </div>
+        </section>
+        <script>
+            const likeCounts = [0, 0, 0, 0];
+            const dislikeCounts = [0, 0, 0, 0];
+
+            function updateCount(type, index) {
+                if (type === 'like') {
+                    likeCounts[index]++;
+                    document.querySelectorAll('.like-count')[index].innerText = likeCounts[index];
+                } else if (type === 'dislike') {
+                    dislikeCounts[index]++;
+                    document.querySelectorAll('.dislike-count')[index].innerText = dislikeCounts[index];
+                }
+            }
+        </script>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiction Books - BookReader</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">BookReader</div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <div class="nav-categories">
+                <a href="#" class="nav-link active">Categories</a>
+                <div class="dropdown-content">
+                    <a href="fiction.html" class="active">Fiction</a>
+                    <a href="mystery.html">Mystery</a>
+                    <a href="romance.html">Romance</a>
+                    <a href="scifi.html">Science Fiction</a>
+                    <a href="fantasy.html">Fantasy</a>
+                    <a href="biography.html">Biography</a>
+                    <a href="history.html">History</a>
+                    <a href="poetry.html">Poetry</a>
+                    <a href="children.html">Children's</a>
+                    <a href="philosophy.html">Philosophy</a>
+                </div>
+            </div>
+            <a href="more-books.html" class="nav-link">More Books</a>
+        </nav>
+        <div class="header-controls">
+            <div class="search-container">
+                <input type="text" id="searchBox" placeholder="Search books...">
+                <button type="button" id="searchBtn">Search</button>
+                <button type="button" id="cancelSearchBtn" class="cancel-btn hidden">✕</button>
+            </div>
+            <button id="themeToggle" class="theme-toggle">🌙 Dark Mode</button>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="category-title">Fiction Books</h1>
+        <div class="book-container">
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/fiction1.jpg" alt="The Great Gatsby">
+                <h3>The Great Gatsby</h3>
+                <p class="author">F. Scott Fitzgerald</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/fiction2.jpg" alt="To Kill a Mockingbird">
+                <h3>To Kill a Mockingbird</h3>
+                <p class="author">Harper Lee</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/fiction3.jpg" alt="1984">
+                <h3>1984</h3>
+                <p class="author">George Orwell</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/fiction4.jpg" alt="Pride and Prejudice">
+                <h3>Pride and Prejudice</h3>
+                <p class="author">Jane Austen</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/fiction5.jpg" alt="The Catcher in the Rye">
+                <h3>The Catcher in the Rye</h3>
+                <p class="author">J.D. Salinger</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/fiction6.jpg" alt="Lord of the Flies">
+                <h3>Lord of the Flies</h3>
+                <p class="author">William Golding</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/fiction7.jpg" alt="The Picture of Dorian Gray">
+                <h3>The Picture of Dorian Gray</h3>
+                <p class="author">Oscar Wilde</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/fiction8.jpg" alt="Brave New World">
+                <h3>Brave New World</h3>
+                <p class="author">Aldous Huxley</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/fiction9.jpg" alt="The Old Man and the Sea">
+                <h3>The Old Man and the Sea</h3>
+                <p class="author">Ernest Hemingway</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/fiction10.jpg" alt="One Hundred Years of Solitude">
+                <h3>One Hundred Years of Solitude</h3>
+                <p class="author">Gabriel García Márquez</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>

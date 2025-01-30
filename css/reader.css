@@ -1,0 +1,264 @@
+:root[data-theme="light"] {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --button-bg: #3498db;
+    --button-hover: #2980b9;
+    --zoom-button-bg: #2ecc71;
+    --zoom-button-hover: #27ae60;
+    --container-bg: #f9f9f9;
+    --comment-bg: #ffffff;
+    --comment-shadow: rgba(0,0,0,0.1);
+}
+
+:root[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --button-bg: #2980b9;
+    --button-hover: #3498db;
+    --zoom-button-bg: #27ae60;
+    --zoom-button-hover: #2ecc71;
+    --container-bg: #2c3e50;
+    --comment-bg: #34495e;
+    --comment-shadow: rgba(0,0,0,0.3);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.reader-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: var(--container-bg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-right: 1px solid var(--comment-shadow);
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: var(--container-bg);
+}
+
+.back-button {
+    padding: 8px 15px;
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.back-button:hover {
+    background-color: var(--button-hover);
+}
+
+.theme-toggle {
+    padding: 8px 15px;
+    background-color: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.theme-toggle:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+.control-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    text-align: left;
+    font-size: 14px;
+}
+
+.control-btn:hover {
+    background-color: var(--button-hover);
+    transform: translateX(5px);
+}
+
+.nav-controls, .zoom-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 0;
+    border-top: 1px solid var(--comment-shadow);
+    border-bottom: 1px solid var(--comment-shadow);
+}
+
+.status-text {
+    padding: 8px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-radius: 4px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.theme-toggle {
+    margin-top: auto;
+    text-align: center;
+    background-color: transparent !important;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+}
+
+.theme-toggle:hover {
+    background-color: var(--text-color) !important;
+    color: var(--bg-color);
+    transform: none;
+}
+
+.reader-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.pdf-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.pdf-controls button {
+    padding: 8px 15px;
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.pdf-controls button:hover {
+    background-color: var(--button-hover);
+}
+
+.pdf-controls span {
+    padding: 5px 10px;
+    background-color: var(--container-bg);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#zoomIn, #zoomOut {
+    background-color: var(--zoom-button-bg);
+}
+
+#zoomIn:hover, #zoomOut:hover {
+    background-color: var(--zoom-button-hover);
+}
+
+#pdfContainer {
+    width: 100%;
+    height: 800px;
+    border: 1px solid var(--comment-shadow);
+    margin-bottom: 20px;
+    overflow: auto;
+    background-color: var(--bg-color);
+}
+
+#pdfContainer canvas {
+    margin: 0 auto;
+    display: block;
+}
+
+.comments-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: var(--container-bg);
+    border-radius: 8px;
+}
+
+.comments-list {
+    margin-bottom: 20px;
+}
+
+.comment {
+    background-color: var(--comment-bg);
+    color: var(--text-color);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px var(--comment-shadow);
+}
+
+.comment-form textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--text-color);
+    border-radius: 4px;
+    resize: vertical;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+#submitComment {
+    padding: 10px 20px;
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#submitComment:hover {
+    background-color: var(--button-hover);
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .reader-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--comment-shadow);
+    }
+
+    .control-btn:hover {
+        transform: none;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    #pdfContainer {
+        height: 600px;
+    }
+}

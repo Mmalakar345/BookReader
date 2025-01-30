@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Books - BookReader</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">BookReader</div>
+        <nav class="main-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="more-books.html" class="nav-link active">More Books</a>
+        </nav>
+        <div class="header-controls">
+            <div class="search-container">
+                <input type="text" id="searchBox" placeholder="Search books...">
+                <button type="button" id="searchBtn">Search</button>
+                <button type="button" id="cancelSearchBtn" class="cancel-btn hidden">✕</button>
+            </div>
+            <button id="themeToggle" class="theme-toggle">🌙 Dark Mode</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="book-container">
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/book11.jpg" alt="The Picture of Dorian Gray">
+                <h3>The Picture of Dorian Gray</h3>
+                <p class="author">Oscar Wilde</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/book12.jpg" alt="Jane Eyre">
+                <h3>Jane Eyre</h3>
+                <p class="author">Charlotte Brontë</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/book13.jpg" alt="Wuthering Heights">
+                <h3>Wuthering Heights</h3>
+                <p class="author">Emily Brontë</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/book14.jpg" alt="Frankenstein">
+                <h3>Frankenstein</h3>
+                <p class="author">Mary Shelley</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/book15.jpg" alt="The Odyssey">
+                <h3>The Odyssey</h3>
+                <p class="author">Homer</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/book16.jpg" alt="Don Quixote">
+                <h3>Don Quixote</h3>
+                <p class="author">Miguel de Cervantes</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/book17.jpg" alt="Crime and Punishment">
+                <h3>Crime and Punishment</h3>
+                <p class="author">Fyodor Dostoevsky</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/book18.jpg" alt="The Divine Comedy">
+                <h3>The Divine Comedy</h3>
+                <p class="author">Dante Alighieri</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/book19.jpg" alt="Les Misérables">
+                <h3>Les Misérables</h3>
+                <p class="author">Victor Hugo</p>
+            </div>
+            <div class="book-card" onclick="openBook('sbk.pdf')">
+                <img src="images/book20.jpg" alt="The Canterbury Tales">
+                <h3>The Canterbury Tales</h3>
+                <p class="author">Geoffrey Chaucer</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+</html>
