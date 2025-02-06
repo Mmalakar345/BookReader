@@ -94,14 +94,14 @@ function updateZoomLevel() {
 
 function onZoomIn() {
     if (scale >= 3.0) return; // Maximum zoom level
-    scale += 0.25;
+    scale += 0.10;
     updateZoomLevel();
     queueRenderPage(pageNum);
 }
 
 function onZoomOut() {
     if (scale <= 0.5) return; // Minimum zoom level
-    scale -= 0.25;
+    scale -= 0.10;
     updateZoomLevel();
     queueRenderPage(pageNum);
 }
