@@ -7,7 +7,7 @@
     --zoom-button-hover: #27ae60;
     --container-bg: #f9f9f9;
     --comment-bg: #ffffff;
-    --comment-shadow: rgba(0,0,0,0.1);
+    --comment-shadow: rgba(0, 0, 0, 0.1);
 }
 
 :root[data-theme="dark"] {
@@ -19,29 +19,22 @@
     --zoom-button-hover: #2ecc71;
     --container-bg: #2c3e50;
     --comment-bg: #34495e;
-    --comment-shadow: rgba(0,0,0,0.3);
+    --comment-shadow: rgba(0, 0, 0, 0.3);
 }
 
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
+    overflow-x: auto;
 }
 
 .reader-layout {
+    padding-top: 60px;
     display: flex;
     min-height: 100vh;
 }
 
-.sidebar {
-    width: 250px;
-    background-color: var(--container-bg);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    border-right: 1px solid var(--comment-shadow);
-}
 
 .main-content {
     flex: 1;
@@ -103,7 +96,8 @@ body {
     transform: translateX(5px);
 }
 
-.nav-controls, .zoom-controls {
+.nav-controls,
+.zoom-controls {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -136,7 +130,7 @@ body {
 }
 
 .reader-container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -171,11 +165,13 @@ body {
     font-size: 14px;
 }
 
-#zoomIn, #zoomOut {
+#zoomIn,
+#zoomOut {
     background-color: var(--zoom-button-bg);
 }
 
-#zoomIn:hover, #zoomOut:hover {
+#zoomIn:hover,
+#zoomOut:hover {
     background-color: var(--zoom-button-hover);
 }
 
