@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Reader</title>
     <link rel="stylesheet" href="css/reader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/readernav.css" />
+    <!-- Unicons CSS -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <script src="script.js" defer></script>
+
 </head>
+
 <body>
+    <nav class="nav">
+        <i class="uil uil-bars navOpenBtn"></i>
+        <a href="#" class="logo">BookReader</a>
+
+        <ul class="nav-links">
+            <i class="uil uil-times navCloseBtn"></i>
+            <li><button id="backButton" class="control-btn"><i class="fas fa-home"></i></button></li>
+            <li><button id="zoomIn" class="control-btn"><i class="fas fa-search-plus"></i></button></li>
+            <span id="zoomLevel" class="status-text">Zoom: 150%</span>
+            <li><button id="zoomOut" class="control-btn"><i class="fas fa-search-minus"></i></button></li>
+            <li><button id="prevPage" class="control-btn"><i class="fas fa-arrow-left"></i></button></li>
+            <span id="currentPage" class="status-text">Page: 1</span>
+            <li><button id="nextPage" class="control-btn"><i class="fas fa-arrow-right"></i></button></li>
+        </ul>
+    </nav>
+
     <div class="reader-layout">
-        <div class="sidebar">
-            <button id="backButton" class="control-btn">← Back to Home</button>
-            <div class="nav-controls">
-                <button id="prevPage" class="control-btn">← Previous</button>
-                <span id="currentPage" class="status-text">Page: 1</span>
-                <button id="nextPage" class="control-btn">Next →</button>
-            </div>
-            <div class="zoom-controls">
-                <button id="zoomIn" class="control-btn">+ Zoom In</button>
-                <span id="zoomLevel" class="status-text">Zoom: 150%</span>
-                <button id="zoomOut" class="control-btn">- Zoom Out</button>
-            </div>
-            <button id="themeToggle" class="control-btn theme-toggle">🌙 Dark Mode</button>
-        </div>
         <div class="main-content">
             <div id="pdfContainer"></div>
             <div class="comments-section">
@@ -38,4 +49,5 @@
     <script src="js/reader.js"></script>
     <script src="js/theme.js"></script>
 </body>
+
 </html>
