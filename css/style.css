@@ -51,7 +51,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    /* position: sticky; */
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -230,11 +230,52 @@ main {
     width: 100%; /* Take full width */
     max-width: 800px; /* Optional: limit max width */
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: #a9ebcf;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
     width: 100%; /* Adjusted width */
-    height: 150px; /* Decreased height */
+    height: 100px; /* Decreased height */
+}
+
+#comments-section {
+    background-color: #20221e;
+    border: 1px solid #3b3636;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+#comments-list {
+    margin-bottom: 15px;
+    max-height: 200px; /* Set a maximum height */
+    overflow-y: auto;  /* Enable vertical scrolling */
+}
+
+#comments-list div {
+    background-color: #54a4ee;
+    border-radius: 3px;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+#comment-input {
+    width: calc(100% - 90px);
+    padding: 10px;
+    border: 1px solid #e95f5f;
+    border-radius: 3px;
+}
+
+#comment-form button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: rgb(64, 238, 108);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#comment-form button:hover {
+    background-color: #0056b3;
 }
 
 /* Responsive Design - Desktop First */
@@ -540,3 +581,5 @@ main {
     font-size: 0.9rem;
 
 }
+
+
